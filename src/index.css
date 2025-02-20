@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Lemonada:wght@300;500;700&display=swap");
+
+:root {
+  --main: #00a2ff;
+  --text: #1e202a;
+  --textSoft: #63687e;
+  --bg: #fff;
+  --bgLighter: #f5f7ff;
+  --cardBg: #f0f2fa;
+  --cardBgHover: #e0e2f0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-size: 16px;
+  font-weight: 300;
+  font-family: "Lemonada", cursive;
+}
+
+body {
+  color: var(--text);
+  background: var(--bg);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--textSoft);
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--bgLighter);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+label,
+button {
+  cursor: pointer;
+}
+
+/* Set skeleton Loadings animation to all images */
+img {
+  background: linear-gradient(
+    100deg,
+    var(--bgLighter) 8%,
+    var(--bg) 30%,
+    var(--bgLighter) 33%
+  );
+  background-size: 200% 100%;
+  animation: 1s shine linear infinite;
+  -webkit-animation: 1s shine linear infinite;
+}
+
+@keyframes shine {
+  to {
+    background-position-x: -200%;
+  }
+}
+
+.app {
+  min-height: 100vh;
+  -webkit-transition: color 0.3s, background-color 0.3s;
+  -moz-transition: color 0.3s, background-color 0.3s;
+  -ms-transition: color 0.3s, background-color 0.3s;
+  -o-transition: color 0.3s, background-color 0.3s;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.section_title,
+.section_title span {
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.section_title span {
+  color: var(--main);
+}
+
+.first_btn {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--main);
+  background: transparent;
+  border: 1px solid var(--main);
+  font-weight: 500;
+  text-transform: capitalize;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.first_btn span {
+  position: relative;
+}
+
+.first_btn::before {
+  content: "";
+  width: 0;
+  height: 100%;
+  background: var(--main);
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.first_btn:hover {
+  color: var(--bg);
+}
+
+.first_btn:hover::before {
+  width: 100%;
+}

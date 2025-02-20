@@ -1,0 +1,11 @@
+.home {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.break_line {
+  width: 25%;
+  height: 1px;
+  margin: auto;
+  background-color: var(--main);
+}

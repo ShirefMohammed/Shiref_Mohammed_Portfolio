@@ -1,0 +1,31 @@
+.skills {
+  padding: 25px 15px 50px 15px;
+}
+
+.skills ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.skills li {
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  white-space: nowrap;
+  background: var(--cardBg);
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.skills li:hover {
+  background: var(--cardBgHover);
+}
