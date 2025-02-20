@@ -81,7 +81,7 @@ const Project = () => {
           )}
 
           {/* Project Links */}
-          {project.demoUrl || project.codeUr ? (
+          {project.demoUrl || project.codeUrl ? (
             <div className={style.links}>
               <h3>Project Links</h3>
               <ul>
